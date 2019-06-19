@@ -5,20 +5,24 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
-import { ProductListComponent } from './product-list/product-list.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ActorListComponent } from './actor-list/actor-list.component';
+
+import { AppRoutingModule } from './app-routing.module';
+import { MovieListComponent } from './movie-list/movie-list.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    RouterModule.forRoot([
-      { path: '', component: ProductListComponent },
-    ])
+    AppRoutingModule,
   ],
   declarations: [
     AppComponent,
     TopBarComponent,
-    ProductListComponent
+    DashboardComponent,
+    ActorListComponent,
+    MovieListComponent,
   ],
   bootstrap: [ AppComponent ]
 })
